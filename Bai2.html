@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="kt">
+<button onclick="Them()">Them</button>
+<button onclick="Xuat()">Xuat mang</button>
+<button onclick="Dao()">Dao</button>
+<h2 id="s"></h2>
+<h2 id="t"></h2>
+<script>
+    let a=[];
+    let text = " ";
+    function Them() {
+        let b = document.getElementById('kt');
+        a.push(b.value);
+        b.value = " ";
+    }
+    function Xuat() {
+        document.getElementById('s').innerHTML = "Mang ban dau: [" + a +"]";
+    }
+    function Dao() {
+        for (let i = a.length - 1; i>=0 ; i--) {
+            text += a[i];
+        }
+        document.getElementById('t').innerHTML= "Mang dao nguoc: " + text;
+    }
+</script>
+</body>
+</html>

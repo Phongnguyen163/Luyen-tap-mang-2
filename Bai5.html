@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi 1: ");
+    let b = prompt("Nhập chuỗi 2: ");
+    a = a.trim(" ");
+    b = b.trim(" ");
+    if (a.length === b.length) {
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b[i]) {
+                count += 1;
+            }
+        }
+        if (count === a.length) {
+            document.write("2 chuỗi giống nhau")
+        }
+        else {
+            document.write("2 chuỗi không giống nhau")
+        }
+    }
+</script>
+</body>
+</html>
